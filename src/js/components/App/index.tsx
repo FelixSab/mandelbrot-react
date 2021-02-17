@@ -1,13 +1,8 @@
-import Logo from 'media/logo.png';
+import { setupTextMatrix } from 'js/webGPU';
 import styles from './App.module.sass';
 
-const App = () => {
-  return (
-    <>
-      <img src={Logo} height={100} />
-      <div className={styles.title}>Hello, World!</div>
-    </>
-  );
-};
+window.onload = setupTextMatrix;
 
-export default App;
+export function App() {
+  return <div className={styles.app}>Hello, World!</div>;
+}
